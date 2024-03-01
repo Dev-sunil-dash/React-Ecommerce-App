@@ -57,7 +57,7 @@ function Category() {
                                         </div>
                                     </div>
                                     {/* Name Text  */}
-                                    <h1 className=' text-sm lg:text-lg text-center font-medium title-font first-letter:uppercase '>{item.name}</h1>
+                                    <h1 className=' text-sm lg:text-lg text-center font-semibold title-font first-letter:uppercase '>{item.name}</h1>
                                 </div>
                             )
                         })}

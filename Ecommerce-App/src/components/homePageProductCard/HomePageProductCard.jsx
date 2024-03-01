@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 // productData 
 const productData = [
@@ -78,6 +79,7 @@ const productData = [
 
 
 function HomePageProductCard() {
+    const navigate = useNavigate();
     return (
         <div className='mt-10'>
             <div className=' bg-red-600 rounded-md w-full'>
@@ -92,7 +94,7 @@ function HomePageProductCard() {
                                 return (
                                     <div key={index} className='p-4 w-full md:w-1/4'>
                                         <div className='h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer'>
-                                            <img src={item.image} alt='Product Image' className='lg:h-80 h-96 w-full' />
+                                            <img onClick={() => navigate('/productinfo')} src={item.image} alt='Product Image' className='lg:h-80 h-96 w-full' />
                                             <div className='p-6'>
                                                 <h2 className='title-font text-lg font-medium text-gray-900 mb-2'>{item.title.substring(0, 25)}...</h2>
                                                 <p className='title-font text-lg font-medium text-gray-900 mb-2'>${item.price}</p>
